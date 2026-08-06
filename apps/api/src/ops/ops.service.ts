@@ -427,7 +427,7 @@ export class OpsService {
       const store = new LocalObjectStore();
       const bytes = await store.read?.(storageKey);
       if (!bytes || bytes.length === 0) return undefined;
-      if (bytes.length > 2_500_000) return undefined;
+      if (bytes.length > 6_000_000) return undefined;
       const b64 = bytes.toString("base64");
       return `data:${mimeType || "image/jpeg"};base64,${b64}`;
     } catch {

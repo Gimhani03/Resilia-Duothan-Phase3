@@ -212,15 +212,17 @@ export default function KycOfficerPage() {
                   <div className="text-xs font-extrabold uppercase text-muted mb-2">
                     {d.documentType === "SELFIE_LIVENESS" ? "Liveness selfie" : d.documentType}
                   </div>
-                  {d.previewDataUrl ? (
+                  {d.previewDataUrl && !/heic|heif/i.test(d.mimeType) ? (
                     <img
                       src={d.previewDataUrl}
                       alt={d.documentType}
                       className="w-full max-h-56 object-contain rounded-lg bg-white border border-line"
                     />
                   ) : (
-                    <div className="text-xs text-muted py-8 text-center">
-                      Preview unavailable · {Math.round(d.sizeBytes / 1024)} KB stored
+                    <div className="text-xs text-muted py-8 text-center px-2">
+                      {/heic|heif/i.test(d.mimeType)
+                        ? "iPhone HEIC photo stored — browsers cannot preview this format. Approve from customer details, or ask customer to re-enrol with updated app."
+                        : `Preview unavailable · ${Math.round(d.sizeBytes / 1024)} KB stored`}
                     </div>
                   )}
                   <div className="text-[11px] text-muted mt-2">

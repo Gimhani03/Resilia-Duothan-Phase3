@@ -14,12 +14,30 @@ import {
   Sub,
 } from "../src/components/ui";
 import * as ImagePicker from "expo-image-picker";
+import * as ImageManipulator from "expo-image-manipulator";
 import { api } from "../src/lib/api";
 import { useAuth } from "../src/lib/auth";
 import { colors, fonts } from "../src/theme";
 
 const DOC_TYPES = ["National ID", "Passport", "Driving licence"] as const;
 const STEPS = 6;
+
+/** iPhones often capture HEIC — convert to JPEG so ops console can preview in browser. */
+async function normalizePhoto(uri: string, base64?: string | null) {
+  const result = await ImageManipulator.manipulateAsync(
+    uri,
+    [{ resize: { width: 1280 } }],
+    {
+      compress: 0.55,
+      format: ImageManipulator.SaveFormat.JPEG,
+      base64: true,
+    },
+  );
+  if (!result.base64) {
+    throw new Error("Could not process photo — try again");
+  }
+  return { uri: result.uri, base64: result.base64, mime: "image/jpeg" as const };
+}
 
 export default function OnboardingScreen() {
   const router = useRouter();
@@ -90,14 +108,15 @@ export default function OnboardingScreen() {
     );
     if (!result || result.canceled || !result.assets?.[0]) return;
     const asset = result.assets[0];
-    if (!asset.base64) {
+    try {
+      const normalized = await normalizePhoto(asset.uri, asset.base64);
+      setDocUri(normalized.uri);
+      setDocBase64(normalized.base64);
+      setDocMime(normalized.mime);
+      setDocSelected(true);
+    } catch {
       setError("Could not read image data — try again");
-      return;
     }
-    setDocUri(asset.uri);
-    setDocBase64(asset.base64);
-    setDocMime(asset.mimeType || "image/jpeg");
-    setDocSelected(true);
   }
 
   async function captureSelfie(useCamera = true) {
@@ -114,14 +133,15 @@ export default function OnboardingScreen() {
     );
     if (!result || result.canceled || !result.assets?.[0]) return;
     const asset = result.assets[0];
-    if (!asset.base64) {
+    try {
+      const normalized = await normalizePhoto(asset.uri, asset.base64);
+      setSelfieUri(normalized.uri);
+      setSelfieBase64(normalized.base64);
+      setSelfieMime(normalized.mime);
+      setLivenessOk(true);
+    } catch {
       setError("Could not read selfie data — try again");
-      return;
     }
-    setSelfieUri(asset.uri);
-    setSelfieBase64(asset.base64);
-    setSelfieMime(asset.mimeType || "image/jpeg");
-    setLivenessOk(true);
   }
 
   async function submit() {
