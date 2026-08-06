@@ -46,10 +46,7 @@ services:
     healthCheckPath: /health
     envVars:
       - key: API_UPSTREAM
-        fromService:
-          name: resilia-api
-          type: web
-          property: hostport
+        value: https://resilia-api.onrender.com
 
   - type: keyvalue
     name: resilia-redis
