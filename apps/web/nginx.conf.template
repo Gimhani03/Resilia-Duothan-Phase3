@@ -7,8 +7,13 @@ server {
     gzip on;
     gzip_types text/plain text/css application/json application/javascript text/xml;
 
+    # Resolve upstream at request time (Render internal hostnames aren't ready at nginx boot)
+    resolver ${NGINX_RESOLVER} valid=10s ipv6=off;
+    resolver_timeout 5s;
+
     location /api/ {
-        proxy_pass ${API_UPSTREAM}/api/;
+        set $api_upstream ${API_UPSTREAM};
+        proxy_pass $api_upstream$request_uri;
         proxy_http_version 1.1;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
