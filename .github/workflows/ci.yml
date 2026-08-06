@@ -28,7 +28,7 @@ jobs:
           node-version: "22"
           cache: npm
       - name: Install
-        run: npm ci
+        run: chmod +x scripts/ci-npm-ci.sh && scripts/ci-npm-ci.sh
       - name: Build shared
         run: npm run build -w @resilia/shared
       - name: Prisma generate + validate
