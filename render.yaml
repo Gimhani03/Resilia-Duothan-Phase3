@@ -7,6 +7,7 @@ services:
     dockerfilePath: ./apps/api/Dockerfile
     dockerContext: .
     plan: starter
+    region: singapore
     healthCheckPath: /api/health/ready
     envVars:
       - key: NODE_ENV
@@ -33,7 +34,7 @@ services:
       - key: APP_VERSION
         value: "0.1.0"
       - key: DEPLOY_REGION
-        value: render
+        value: render-sg
 
   - type: web
     name: resilia-web
@@ -41,18 +42,25 @@ services:
     dockerfilePath: ./apps/web/Dockerfile
     dockerContext: .
     plan: starter
+    region: singapore
     healthCheckPath: /health
     envVars:
       - key: API_UPSTREAM
-        sync: false
+        fromService:
+          name: resilia-api
+          type: web
+          property: hostport
 
   - type: keyvalue
     name: resilia-redis
     plan: starter
+    region: singapore
+    maxmemoryPolicy: allkeys-lru
     ipAllowList: []
 
 databases:
   - name: resilia-db
     plan: starter
+    region: singapore
     databaseName: resilia
     user: resilia
