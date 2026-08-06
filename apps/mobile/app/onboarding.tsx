@@ -85,7 +85,7 @@ export default function OnboardingScreen() {
     setError("");
     const result = await capture(
       useCamera,
-      { mediaTypes: ["images"], quality: 0.7, base64: true },
+      { mediaTypes: ["images"], quality: 0.4, base64: true },
       "No camera on this device — pick an ID photo from your library",
     );
     if (!result || result.canceled || !result.assets?.[0]) return;
@@ -106,7 +106,7 @@ export default function OnboardingScreen() {
       useCamera,
       {
         mediaTypes: ["images"],
-        quality: 0.7,
+        quality: 0.4,
         base64: true,
         cameraType: ImagePicker.CameraType.front,
       },

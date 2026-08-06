@@ -1,13 +1,18 @@
 import { NestFactory } from "@nestjs/core";
 import { ValidationPipe, Logger } from "@nestjs/common";
+import { json, urlencoded } from "express";
 import helmet from "helmet";
 import { randomUUID } from "crypto";
 import { AppModule } from "./app.module";
 import { isDemoMode } from "./config/fee.config";
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, { bodyParser: false });
   const logger = new Logger("Bootstrap");
+
+  // Onboarding sends base64 ID + selfie images in JSON
+  app.use(json({ limit: "15mb" }));
+  app.use(urlencoded({ extended: true, limit: "15mb" }));
 
   app.use(helmet({ contentSecurityPolicy: false }));
   app.use((req: any, res: any, next: () => void) => {
