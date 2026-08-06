@@ -32,6 +32,6 @@ ENV API_UPSTREAM=http://api:3001
 EXPOSE 80
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
-  CMD wget -qO- http://127.0.0.1/health || exit 1
+  CMD sh -c 'wget -qO- "http://127.0.0.1:${PORT:-80}/health" || exit 1'
 
 ENTRYPOINT ["/docker-entrypoint.sh"]

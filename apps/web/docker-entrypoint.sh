@@ -7,7 +7,9 @@ case "$RAW" in
   *) export API_UPSTREAM="http://${RAW}" ;;
 esac
 
-envsubst '${API_UPSTREAM}' < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf
+export PORT="${PORT:-80}"
 
-echo "[web] Proxying /api -> ${API_UPSTREAM}/api/"
+envsubst '${API_UPSTREAM} ${PORT}' < /etc/nginx/templates/default.conf.template > /etc/nginx/conf.d/default.conf
+
+echo "[web] Listening on :${PORT}, proxying /api -> ${API_UPSTREAM}/api/"
 exec nginx -g 'daemon off;'
