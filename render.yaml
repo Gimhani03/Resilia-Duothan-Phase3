@@ -6,7 +6,7 @@ services:
     runtime: docker
     dockerfilePath: ./apps/api/Dockerfile
     dockerContext: .
-    plan: starter
+    plan: free
     region: singapore
     healthCheckPath: /api/health/ready
     envVars:
@@ -41,7 +41,7 @@ services:
     runtime: docker
     dockerfilePath: ./apps/web/Dockerfile
     dockerContext: .
-    plan: starter
+    plan: free
     region: singapore
     healthCheckPath: /health
     envVars:
@@ -53,14 +53,14 @@ services:
 
   - type: keyvalue
     name: resilia-redis
-    plan: starter
+    plan: free
     region: singapore
     maxmemoryPolicy: allkeys-lru
     ipAllowList: []
 
 databases:
   - name: resilia-db
-    plan: starter
+    plan: free
     region: singapore
     databaseName: resilia
     user: resilia
