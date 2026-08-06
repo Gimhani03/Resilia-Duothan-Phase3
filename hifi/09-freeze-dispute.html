@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Freeze Card &amp; Dispute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Security</span></div>
+      <span style="width:48px"></span>
+    </div>
+    <div class="content">
+      <h1 class="hero-title" style="font-size:26px">Protect your money</h1>
+      <p class="sub">Instantly freeze a card or account, or raise a dispute if you suspect fraud.</p>
+
+      <div class="card" style="background:linear-gradient(145deg,#1a1a2e,#3a1830);color:#fff;border:none">
+        <div style="font-size:12px;opacity:0.75;margin-bottom:8px">Debit card · **** 4821</div>
+        <div style="font-family:var(--display);font-size:22px;margin-bottom:14px">Amal Perera</div>
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span class="badge badge-ok">● Active</span>
+          <span style="font-size:12px;opacity:0.8">Visa Debit</span>
+        </div>
+      </div>
+
+      <div class="card alert-card">
+        <div class="dot"></div>
+        <div>
+          <strong style="display:block;color:var(--crimson-dark);font-size:13px;margin-bottom:4px">Suspect fraud?</strong>
+          <span style="font-size:12px;color:var(--muted)">Freezing blocks new spend immediately. Existing authorisations may still settle.</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button" style="background:linear-gradient(145deg,#c9184a,#7a0f2c)">❄ Freeze card now</button>
+      <button class="btn btn-secondary" type="button" style="width:100%;margin-top:10px">Freeze entire account</button>
+
+      <div class="section-label" style="margin-top:22px">Or raise a dispute</div>
+      <div class="field">
+        <label>Transaction</label>
+        <input class="input" value="Keells Super · −LKR 4,250 · Today" readonly />
+      </div>
+      <div class="field">
+        <label>Reason</label>
+        <input class="input" value="I did not authorise this payment" readonly />
+      </div>
+      <button class="btn btn-secondary" type="button" style="width:100%">Submit dispute</button>
+      <p class="footer-note">FR-15 · Freeze &amp; dispute write to immutable audit log</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -2,10 +2,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// Default: SQLite (works without Docker). For Postgres: set provider = "postgresql"
-// and DATABASE_URL=postgresql://resilia:resilia@localhost:5432/resilia then db push.
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 

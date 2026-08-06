@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Audit Trail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="desktop" id="screen">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <div>
+          <div>RESILIA</div>
+          <div style="font-size:11px;opacity:0.65;font-weight:600">Ops Console</div>
+        </div>
+      </div>
+      <div class="nav-item">Security overview</div>
+      <div class="nav-item">Fraud queue</div>
+      <div class="nav-item">Microservices</div>
+      <div class="nav-item active">Audit trail</div>
+      <div class="nav-item">Disaster recovery</div>
+      <div class="nav-item">SIEM alerts</div>
+      <div style="margin-top:auto;padding:12px;border-radius:12px;background:rgba(255,255,255,0.06);font-size:12px;line-height:1.45;color:rgba(255,255,255,0.75)">
+        SOC shift · Night<br />Analyst: S. Jayasuriya
+      </div>
+    </aside>
+    <section class="main">
+      <div class="topbar">
+        <div>
+          <h1>Immutable audit trail</h1>
+          <p style="color:var(--muted);font-size:13px;margin-top:4px">Every financial write and admin action · FR-13 · retained per regulation</p>
+        </div>
+        <span class="badge badge-ok">● Chain integrity OK</span>
+      </div>
+
+      <div class="kpi-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="kpi"><div class="k">Events today</div><div class="v" style="font-size:24px">128.4k</div><div class="s" style="color:var(--muted)">All services</div></div>
+        <div class="kpi"><div class="k">Financial writes</div><div class="v" style="font-size:24px">41.2k</div><div class="s" style="color:var(--ok)">Settled + held</div></div>
+        <div class="kpi"><div class="k">Admin actions</div><div class="v" style="font-size:24px">186</div><div class="s" style="color:var(--muted)">Approvals / freezes</div></div>
+        <div class="kpi"><div class="k">Hash mismatches</div><div class="v" style="font-size:24px">0</div><div class="s" style="color:var(--ok)">Last verify 2m ago</div></div>
+      </div>
+
+      <div class="panel">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:12px;flex-wrap:wrap">
+          <h3 style="margin:0">Latest entries</h3>
+          <div class="chips" style="margin:0">
+            <span class="chip on">All</span>
+            <span class="chip">Payments</span>
+            <span class="chip">Auth</span>
+            <span class="chip">Admin</span>
+            <span class="chip">Fraud</span>
+          </div>
+        </div>
+        <div class="service"><span class="name">TXN-9F2A81 · Transfer settled</span><span class="latency">09:41:12</span><span class="badge badge-ok">Payments</span></div>
+        <div class="service"><span class="name">HOLD-44C1 · Txn frozen pre-settlement</span><span class="latency">09:38:04</span><span class="badge badge-warn">Fraud</span></div>
+        <div class="service"><span class="name">DEV-882 · New device MFA challenge</span><span class="latency">09:36:51</span><span class="badge badge-ok">Auth</span></div>
+        <div class="service"><span class="name">LN-2065-88421 · Officer approved</span><span class="latency">09:22:18</span><span class="badge badge-ok">Admin</span></div>
+        <div class="service"><span class="name">CARD-4821 · Freeze requested by customer</span><span class="latency">08:55:02</span><span class="badge badge-danger">Security</span></div>
+        <div class="service"><span class="name">KYC-1192 · Document pack verified</span><span class="latency">08:41:40</span><span class="badge badge-ok">Identity</span></div>
+        <div class="service"><span class="name">DR-CHECK · Region B replication healthy</span><span class="latency">08:30:00</span><span class="badge badge-ok">Infra</span></div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

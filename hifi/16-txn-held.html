@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Transaction Held</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Security hold</span></div>
+      <span style="width:48px"></span>
+    </div>
+    <div class="content">
+      <div class="trust-pill">⏸ Frozen before settlement · Fraud &amp; Risk</div>
+      <h1 class="hero-title" style="font-size:26px">Payment on hold</h1>
+      <p class="sub">We paused this transaction because it looked unusual. Nothing has left your account yet (FR-09).</p>
+
+      <div class="card">
+        <div style="font-family:var(--display);font-size:30px;color:var(--navy);margin-bottom:6px">LKR 18,400.00</div>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px">Unknown merchant · Online</div>
+        <div class="summary-row"><span>From</span><strong>Savings ****4821</strong></div>
+        <div class="summary-row"><span>Risk score</span><strong>86 / 100</strong></div>
+        <div class="summary-row"><span>Reason</span><strong>New merchant + high amount</strong></div>
+        <div class="summary-row"><span>Status</span><strong><span class="badge badge-warn">● Held</span></strong></div>
+        <div class="summary-row"><span>Reference</span><strong>HOLD-44C1</strong></div>
+      </div>
+
+      <div class="card alert-card" style="background:var(--warn-soft);border-color:rgba(180,83,9,0.25)">
+        <div class="dot" style="background:var(--warn);box-shadow:0 0 0 4px rgba(180,83,9,0.15)"></div>
+        <div>
+          <strong style="display:block;color:var(--warn);font-size:13px;margin-bottom:4px">Was this you?</strong>
+          <span style="font-size:12px;color:var(--muted)">Confirm to release, or reject to cancel permanently and notify the SOC queue.</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Yes — release with MFA</button>
+      <button class="btn btn-secondary" type="button" style="width:100%;margin-top:10px;color:var(--crimson);border-color:rgba(201,24,74,0.35)">No — reject &amp; freeze card</button>
+      <p class="footer-note">Auto-cancel in 24h if no response · Audit logged</p>
+    </div>
+  </div>
+</body>
+</html>

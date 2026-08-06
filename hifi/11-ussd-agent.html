@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — USSD &amp; Agent Access</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  <style>
+    .ussd-phone {
+      width: 320px;
+      min-height: 560px;
+      background: #1a1a1a;
+      border-radius: 28px;
+      box-shadow: var(--shadow), 0 0 0 8px #0d0d0d, 0 0 0 10px #3a3a3a;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 18px 16px 22px;
+    }
+    .ussd-screen {
+      flex: 1;
+      background: #c8d6b0;
+      border-radius: 8px;
+      padding: 16px;
+      font-family: "Courier New", monospace;
+      color: #1a1a1a;
+      font-size: 14px;
+      line-height: 1.45;
+      margin-bottom: 16px;
+      white-space: pre-wrap;
+    }
+    .ussd-keys {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+    .ussd-keys span {
+      background: #2a2a2a;
+      color: #eee;
+      border-radius: 10px;
+      padding: 12px 0;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .agent-panel {
+      width: 420px;
+      min-height: 560px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+    }
+    .pair {
+      display: flex;
+      gap: 24px;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="pair" id="screen">
+    <div class="ussd-phone">
+      <div style="color:#aaa;font-size:11px;font-weight:700;text-align:center;margin-bottom:10px;font-family:var(--font)">Feature phone · USSD *767#</div>
+      <div class="ussd-screen">RESILIA Banking
+----------------
+1. Check balance
+2. Transfer funds
+3. Mini statement
+4. Freeze account
+5. Find agent
+
+Reply with number
+or 0 to exit</div>
+      <div class="ussd-keys">
+        <span>1</span><span>2</span><span>3</span>
+        <span>4</span><span>5</span><span>6</span>
+        <span>7</span><span>8</span><span>9</span>
+        <span>*</span><span>0</span><span>#</span>
+      </div>
+    </div>
+
+    <div class="agent-panel">
+      <div class="brand" style="margin-bottom:16px">
+        <div class="brand-mark">R</div>
+        <div>
+          <div>Agent terminal</div>
+          <div style="font-size:12px;color:var(--muted);font-weight:600">Merchant / Agent · Galle Road</div>
+        </div>
+      </div>
+      <h1 class="hero-title" style="font-size:24px">Cash-in for customer</h1>
+      <p class="sub" style="margin-bottom:14px">Serve unbanked &amp; low-connectivity users through the agent network (FR-11).</p>
+
+      <div class="field">
+        <label>Customer mobile / USSD ID</label>
+        <input class="input" value="077 •• 4821" readonly />
+      </div>
+      <div class="field">
+        <label>OTP from customer phone</label>
+        <div class="otp">
+          <span class="filled">9</span>
+          <span class="filled">1</span>
+          <span class="filled">4</span>
+          <span class="filled">2</span>
+          <span> </span>
+          <span> </span>
+        </div>
+      </div>
+      <div class="field">
+        <label>Cash-in amount (LKR)</label>
+        <input class="input" value="5,000.00" readonly style="font-weight:800;font-size:18px" />
+      </div>
+      <div class="summary-box">
+        <div class="summary-row"><span>Agent fee</span><strong>LKR 25</strong></div>
+        <div class="summary-row"><span>Channel</span><strong>Agent + USSD confirm</strong></div>
+        <div class="summary-row"><span>Audit</span><strong>Logged immutably</strong></div>
+      </div>
+      <button class="btn btn-primary" type="button">Complete cash-in</button>
+    </div>
+  </div>
+</body>
+</html>

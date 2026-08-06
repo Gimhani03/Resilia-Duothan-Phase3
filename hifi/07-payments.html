@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Bills &amp; QR Pay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Pay</span></div>
+      <span style="width:48px"></span>
+    </div>
+    <div class="content">
+      <h1 class="hero-title" style="font-size:26px">Bills &amp; QR</h1>
+      <p class="sub">Pay utilities, merchants, and scan QR from linked accounts or cards.</p>
+
+      <div class="row" style="margin-bottom:16px">
+        <div class="card" style="flex:1;text-align:center;margin:0;padding:18px 10px">
+          <div style="font-size:22px;margin-bottom:8px">▦</div>
+          <strong style="font-size:13px;color:var(--navy)">Scan QR</strong>
+        </div>
+        <div class="card" style="flex:1;text-align:center;margin:0;padding:18px 10px;border-color:var(--crimson);background:var(--crimson-soft)">
+          <div style="font-size:22px;margin-bottom:8px">⚡</div>
+          <strong style="font-size:13px;color:var(--crimson-dark)">Pay bill</strong>
+        </div>
+      </div>
+
+      <div class="section-label">Saved billers</div>
+      <div class="card" style="padding-top:4px;padding-bottom:4px">
+        <div class="txn">
+          <div class="txn-icon">CE</div>
+          <div class="txn-info"><strong>CEB Electricity</strong><span>Acc 4521-889 · Due in 3 days</span></div>
+          <div class="txn-amt out">6,890</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">WT</div>
+          <div class="txn-info"><strong>Water Board</strong><span>Acc 1182 · Due in 8 days</span></div>
+          <div class="txn-amt out">1,240</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">MO</div>
+          <div class="txn-info"><strong>Dialog Mobile</strong><span>077 •• 4821</span></div>
+          <div class="txn-amt out">2,500</div>
+        </div>
+      </div>
+
+      <div class="field" style="margin-top:8px">
+        <label>Amount (LKR) · CEB</label>
+        <input class="input" value="6,890.00" readonly style="font-size:20px;font-weight:800" />
+      </div>
+      <div class="field">
+        <label>Pay from</label>
+        <input class="input" value="Savings ****4821" readonly />
+      </div>
+
+      <div class="summary-box">
+        <div class="summary-row"><span>Merchant / utility</span><strong>CEB</strong></div>
+        <div class="summary-row"><span>Fraud screen</span><strong><span class="badge badge-ok">● Cleared</span></strong></div>
+        <div class="summary-row"><span>Fee</span><strong>LKR 0.00</strong></div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Pay with MFA</button>
+    </div>
+    <div class="tabbar">
+      <div class="tab"><span class="ico">⌂</span>Home</div>
+      <div class="tab active"><span class="ico">⇄</span>Pay</div>
+      <div class="tab"><span class="ico">◇</span>Cards</div>
+      <div class="tab"><span class="ico">☰</span>More</div>
+    </div>
+  </div>
+</body>
+</html>

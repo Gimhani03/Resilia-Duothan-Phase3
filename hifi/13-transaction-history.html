@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Transaction History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>History</span></div>
+      <button class="btn-ghost" type="button">Export</button>
+    </div>
+    <div class="content">
+      <h1 class="hero-title" style="font-size:26px">Transactions</h1>
+      <p class="sub">Categorised history for Savings ****4821 · real-time balances (FR-04)</p>
+
+      <div class="chips">
+        <span class="chip on">All</span>
+        <span class="chip">Income</span>
+        <span class="chip">Spend</span>
+        <span class="chip">Transfers</span>
+        <span class="chip">Bills</span>
+      </div>
+
+      <div class="field">
+        <label>Search</label>
+        <input class="input" value="July 2065" readonly />
+      </div>
+
+      <div class="section-label">Today</div>
+      <div class="card" style="padding-top:4px;padding-bottom:4px">
+        <div class="txn">
+          <div class="txn-icon">NF</div>
+          <div class="txn-info"><strong>Nimal Fernando</strong><span>Transfer · Instant · TXN-9F2A81</span></div>
+          <div class="txn-amt out">−25,025</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">KE</div>
+          <div class="txn-info"><strong>Keells Super</strong><span>Merchant / QR</span></div>
+          <div class="txn-amt out">−4,250</div>
+        </div>
+      </div>
+
+      <div class="section-label">Yesterday</div>
+      <div class="card" style="padding-top:4px;padding-bottom:4px">
+        <div class="txn">
+          <div class="txn-icon" style="background:var(--ok-soft);color:var(--ok)">SA</div>
+          <div class="txn-info"><strong>Salary · NSBM Labs</strong><span>Credit · Payroll</span></div>
+          <div class="txn-amt in">+185,000</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">CE</div>
+          <div class="txn-info"><strong>CEB Electricity</strong><span>Bill pay</span></div>
+          <div class="txn-amt out">−6,890</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon" style="background:var(--warn-soft);color:var(--warn)">⚠</div>
+          <div class="txn-info"><strong>Unknown merchant</strong><span>Held by Fraud &amp; Risk</span></div>
+          <div class="txn-amt out">−18,400</div>
+        </div>
+      </div>
+
+      <p class="footer-note">Tap any row for receipt · Dispute available for 90 days</p>
+    </div>
+  </div>
+</body>
+</html>

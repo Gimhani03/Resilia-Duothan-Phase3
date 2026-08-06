@@ -19,6 +19,9 @@
     "db:down": "docker compose down",
     "db:migrate": "npm run prisma:migrate -w @resilia/api",
     "db:seed": "npm run prisma:seed -w @resilia/api",
-    "setup": "npm install && npm run build -w @resilia/shared && cd apps/api && npx prisma migrate dev --name init --skip-seed && npm run prisma:seed"
+    "setup": "npm install && npm run build -w @resilia/shared && npm run db:up && sleep 4 && npm run db:migrate && npm run db:seed",
+    "prod:up": "docker compose -f docker-compose.prod.yml --env-file .env.prod up --build -d",
+    "prod:down": "docker compose -f docker-compose.prod.yml --env-file .env.prod down",
+    "prod:logs": "docker compose -f docker-compose.prod.yml --env-file .env.prod logs -f"
   }
 }

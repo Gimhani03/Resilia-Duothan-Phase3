@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Profile &amp; Trusted Devices</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Security</span></div>
+      <span style="width:48px"></span>
+    </div>
+    <div class="content">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px">
+        <div class="brand-mark" style="width:56px;height:56px;border-radius:16px;font-size:18px">AP</div>
+        <div>
+          <div style="font-weight:800;color:var(--navy);font-size:18px">Amal Perera</div>
+          <div style="font-size:12px;color:var(--muted)">NIC verified · MFA enrolled</div>
+        </div>
+      </div>
+
+      <h1 class="hero-title" style="font-size:24px">Trusted devices</h1>
+      <p class="sub">New devices need step-up MFA before access (FR-02 · FR-03).</p>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
+          <div>
+            <strong style="color:var(--navy)">iPhone 16 · This device</strong>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px">Colombo · Last active now</div>
+          </div>
+          <span class="badge badge-ok">Trusted</span>
+        </div>
+        <div class="summary-row"><span>MFA</span><strong>Authenticator + Face ID</strong></div>
+      </div>
+
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px">
+          <div>
+            <strong style="color:var(--navy)">MacBook Pro</strong>
+            <div style="font-size:12px;color:var(--muted);margin-top:4px">Home · Last active 2 days ago</div>
+          </div>
+          <span class="badge badge-ok">Trusted</span>
+        </div>
+        <button class="btn-ghost" type="button" style="padding:0">Remove trust</button>
+      </div>
+
+      <div class="card alert-card">
+        <div class="dot"></div>
+        <div>
+          <strong style="display:block;color:var(--crimson-dark);font-size:13px;margin-bottom:4px">Pending device</strong>
+          <span style="font-size:12px;color:var(--muted)">Android · Colombo café · blocked until MFA · 12 min ago</span>
+          <div style="display:flex;gap:8px;margin-top:10px">
+            <button class="btn btn-secondary" type="button" style="flex:1;padding:10px">Deny</button>
+            <button class="btn btn-primary" type="button" style="flex:1;padding:10px">Approve</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-label">MFA methods</div>
+      <div class="mfa-grid">
+        <div class="mfa-option active">
+          <div class="mfa-icon">◉</div>
+          <div><strong>Authenticator app</strong><span>Primary</span></div>
+        </div>
+        <div class="mfa-option">
+          <div class="mfa-icon">◎</div>
+          <div><strong>SMS OTP</strong><span>••78</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

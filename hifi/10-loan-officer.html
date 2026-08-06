@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Loan Officer Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="desktop" id="screen">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <div>
+          <div>RESILIA</div>
+          <div style="font-size:11px;opacity:0.65;font-weight:600">Credit Desk</div>
+        </div>
+      </div>
+      <div class="nav-item">Queue overview</div>
+      <div class="nav-item active">Application review</div>
+      <div class="nav-item">Risk models</div>
+      <div class="nav-item">Approved today</div>
+      <div class="nav-item">Rejected / hold</div>
+      <div style="margin-top:auto;padding:12px;border-radius:12px;background:rgba(255,255,255,0.06);font-size:12px;line-height:1.45;color:rgba(255,255,255,0.75)">
+        Officer · M. Fernando<br />Branch · Colombo Hub
+      </div>
+    </aside>
+    <section class="main">
+      <div class="topbar">
+        <div>
+          <h1>Loan application · LN-2065-88421</h1>
+          <p style="color:var(--muted);font-size:13px;margin-top:4px">Full applicant + risk-scoring context for approve / reject (FR-08)</p>
+        </div>
+        <span class="badge badge-warn">● Awaiting decision</span>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="k">Requested</div>
+          <div class="v" style="font-size:22px">350k</div>
+          <div class="s" style="color:var(--muted)">LKR · 24 months</div>
+        </div>
+        <div class="kpi">
+          <div class="k">AI eligibility</div>
+          <div class="v" style="font-size:22px">78%</div>
+          <div class="s" style="color:var(--ok)">Band B · Acceptable</div>
+        </div>
+        <div class="kpi">
+          <div class="k">Est. instalment</div>
+          <div class="v" style="font-size:22px">17.8k</div>
+          <div class="s" style="color:var(--muted)">per month</div>
+        </div>
+        <div class="kpi">
+          <div class="k">DTI ratio</div>
+          <div class="v" style="font-size:22px">31%</div>
+          <div class="s" style="color:var(--ok)">Within policy</div>
+        </div>
+      </div>
+
+      <div class="panel-grid">
+        <div class="panel">
+          <h3>Applicant</h3>
+          <div class="summary-row"><span>Name</span><strong>Amal S. Perera</strong></div>
+          <div class="summary-row"><span>NIC</span><strong>1995•••••V</strong></div>
+          <div class="summary-row"><span>Employment</span><strong>NSBM Labs · Permanent</strong></div>
+          <div class="summary-row"><span>Monthly income</span><strong>LKR 185,000</strong></div>
+          <div class="summary-row"><span>Existing exposure</span><strong>LKR 42,000 card</strong></div>
+          <div class="summary-row"><span>Purpose</span><strong>Education</strong></div>
+          <div class="summary-row"><span>KYC status</span><strong><span class="badge badge-ok">Verified</span></strong></div>
+        </div>
+        <div class="panel">
+          <h3>Risk &amp; decision</h3>
+          <div class="ai-card" style="margin-top:0">
+            <div class="section-label" style="margin:0 0 6px;color:var(--crimson)">Model recommendation</div>
+            <div style="font-family:var(--display);font-size:28px;color:var(--crimson);margin-bottom:6px">Approve with conditions</div>
+            <div class="hint">Fraud &amp; Credit scoring microservice · explainable features available</div>
+            <div class="progress"><i></i></div>
+          </div>
+          <div class="summary-row"><span>Fraud flags</span><strong><span class="badge badge-ok">None</span></strong></div>
+          <div class="summary-row"><span>Document pack</span><strong>Complete</strong></div>
+          <div class="summary-row"><span>Suggested rate</span><strong>12.5% p.a.</strong></div>
+          <div style="display:flex;gap:10px;margin-top:16px">
+            <button class="btn btn-primary" type="button" style="flex:1;background:linear-gradient(145deg,#0f7a4c,#0a5a38)">Approve</button>
+            <button class="btn btn-secondary" type="button" style="flex:1;color:var(--crimson);border-color:rgba(201,24,74,0.35)">Reject</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

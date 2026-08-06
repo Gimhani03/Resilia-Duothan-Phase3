@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Transfer Receipt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <span>RESILIA</span>
+      </div>
+      <button class="btn-ghost" type="button">Done</button>
+    </div>
+    <div class="content" style="text-align:center">
+      <div style="width:72px;height:72px;border-radius:50%;background:var(--ok-soft);color:var(--ok);display:grid;place-items:center;margin:12px auto 18px;font-size:32px;font-weight:800">✓</div>
+      <h1 class="hero-title" style="font-size:28px">Transfer sent</h1>
+      <p class="sub" style="text-align:center">MFA verified · fraud cleared · settled via saga</p>
+
+      <div class="card" style="text-align:left;margin-top:8px">
+        <div style="font-family:var(--display);font-size:34px;color:var(--navy);margin-bottom:4px">LKR 25,025.00</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Including fee LKR 25.00</div>
+        <div class="summary-row"><span>To</span><strong>Nimal Fernando</strong></div>
+        <div class="summary-row"><span>Bank</span><strong>People’s Bank · ****3190</strong></div>
+        <div class="summary-row"><span>From</span><strong>Savings ****4821</strong></div>
+        <div class="summary-row"><span>Reference</span><strong>TXN-9F2A81</strong></div>
+        <div class="summary-row"><span>Status</span><strong><span class="badge badge-ok">● Completed</span></strong></div>
+        <div class="summary-row"><span>Time</span><strong>22 Jul 2065 · 09:41</strong></div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Share receipt</button>
+      <button class="btn btn-secondary" type="button" style="width:100%;margin-top:10px">Back to home</button>
+      <p class="footer-note">Immutable audit entry written · Notification sent</p>
+    </div>
+  </div>
+</body>
+</html>

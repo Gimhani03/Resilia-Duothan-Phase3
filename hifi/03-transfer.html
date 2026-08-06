@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Fund Transfer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Transfer</span></div>
+      <span style="width:48px"></span>
+    </div>
+    <div class="content">
+      <div class="stepper">
+        <span class="on"></span><span class="on"></span><span class="on"></span><span></span>
+      </div>
+      <h1 class="hero-title" style="font-size:26px">Review &amp; confirm</h1>
+      <p class="sub">Fraud check and settlement details are shown before you authorize with MFA.</p>
+
+      <div class="card">
+        <div class="section-label" style="margin-top:0">Recipient</div>
+        <strong style="display:block;color:var(--navy);font-size:15px">Nimal Fernando</strong>
+        <span style="font-size:12px;color:var(--muted)">People’s Bank · ****3190</span>
+      </div>
+
+      <div class="field">
+        <label>Amount (LKR)</label>
+        <input class="input" value="25,000.00" readonly style="font-size:22px;font-weight:800;font-family:var(--display)" />
+      </div>
+
+      <div class="field">
+        <label>From account</label>
+        <input class="input" value="Savings ****4821 · LKR 482,650.00" readonly />
+      </div>
+
+      <div class="summary-box">
+        <div class="summary-row"><span>Transfer fee</span><strong>LKR 25.00</strong></div>
+        <div class="summary-row"><span>Settlement</span><strong>Instant · Kafka saga</strong></div>
+        <div class="summary-row"><span>Fraud screening</span><strong><span class="badge badge-ok">● Cleared</span></strong></div>
+        <div class="summary-row"><span>Total debit</span><strong>LKR 25,025.00</strong></div>
+      </div>
+
+      <div class="card alert-card" style="background:var(--ok-soft);border-color:rgba(15,122,76,0.25)">
+        <div class="dot" style="background:var(--ok);box-shadow:0 0 0 4px rgba(15,122,76,0.15)"></div>
+        <div>
+          <strong style="display:block;color:var(--ok);font-size:13px;margin-bottom:4px">Pre-settlement fraud check passed</strong>
+          <span style="font-size:12px;color:var(--muted)">Risk score 12/100 · within your usual pattern. Transaction can still be frozen by Fraud &amp; Risk before final settlement.</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Confirm with MFA</button>
+      <button class="btn btn-secondary" type="button" style="width:100%;margin-top:10px">Cancel transfer</button>
+    </div>
+  </div>
+</body>
+</html>

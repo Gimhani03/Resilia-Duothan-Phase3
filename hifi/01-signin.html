@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Secure Sign-in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <div class="brand">
+        <div class="brand-mark">R</div>
+        <span>RESILIA</span>
+      </div>
+      <button class="btn-ghost" type="button">Help</button>
+    </div>
+    <div class="content">
+      <div class="trust-pill">⚠ New device detected · extra verification required</div>
+      <h1 class="hero-title">Welcome back</h1>
+      <p class="sub">Sign in with your password, then complete multi-factor authentication to access your accounts.</p>
+
+      <div class="field">
+        <label>National ID / Username</label>
+        <input class="input" value="a.perera.2065" readonly />
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input class="input" type="password" value="••••••••••••" readonly />
+      </div>
+
+      <p class="section-label" style="margin-top:18px">Choose MFA method</p>
+      <div class="mfa-grid">
+        <div class="mfa-option active">
+          <div class="mfa-icon">◉</div>
+          <div>
+            <strong>Authenticator app</strong>
+            <span>Recommended · 6-digit code</span>
+          </div>
+        </div>
+        <div class="mfa-option">
+          <div class="mfa-icon">◎</div>
+          <div>
+            <strong>SMS OTP</strong>
+            <span>Sent to ••78</span>
+          </div>
+        </div>
+        <div class="mfa-option">
+          <div class="mfa-icon">✦</div>
+          <div>
+            <strong>Biometric</strong>
+            <span>Face ID / fingerprint</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Authenticator code</label>
+        <div class="otp">
+          <span class="filled">4</span>
+          <span class="filled">8</span>
+          <span class="filled">2</span>
+          <span> </span>
+          <span> </span>
+          <span> </span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Verify &amp; continue</button>
+      <p class="footer-note">Protected by HSM-backed identity · Session expires in 15 min</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Account Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <div>
+        <div style="font-size:12px;color:var(--muted);font-weight:700">Good morning</div>
+        <div style="font-weight:800;color:var(--navy)">Amal Perera</div>
+      </div>
+      <div class="brand-mark">AP</div>
+    </div>
+    <div class="content">
+      <div class="card balance-card">
+        <div class="label">Available balance · Savings ****4821</div>
+        <div class="amount">LKR 482,650.00</div>
+        <div class="balance-meta">
+          <span>Last sync · just now</span>
+          <span>Region A · Healthy</span>
+        </div>
+      </div>
+
+      <div class="card alert-card">
+        <div class="dot"></div>
+        <div>
+          <strong style="display:block;color:var(--crimson-dark);font-size:13px;margin-bottom:4px">Security alert</strong>
+          <span style="font-size:12px;color:var(--muted);line-height:1.45">Login from a new device in Colombo was blocked until MFA completed. Review devices →</span>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <div class="qa"><div class="ico">↗</div><span>Transfer</span></div>
+        <div class="qa"><div class="ico">▦</div><span>Pay bills</span></div>
+        <div class="qa"><div class="ico">%</div><span>Loans</span></div>
+        <div class="qa"><div class="ico">❄</div><span>Freeze</span></div>
+      </div>
+
+      <div class="section-label">Recent activity</div>
+      <div class="card" style="padding-top:4px;padding-bottom:4px">
+        <div class="txn">
+          <div class="txn-icon">KE</div>
+          <div class="txn-info"><strong>Keells Super</strong><span>Today · Merchant / QR</span></div>
+          <div class="txn-amt out">−4,250</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">SA</div>
+          <div class="txn-info"><strong>Salary · NSBM Labs</strong><span>Yesterday · Credit</span></div>
+          <div class="txn-amt in">+185,000</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">CE</div>
+          <div class="txn-info"><strong>CEB Bill</strong><span>Mon · Utilities</span></div>
+          <div class="txn-amt out">−6,890</div>
+        </div>
+        <div class="txn">
+          <div class="txn-icon">TR</div>
+          <div class="txn-info"><strong>Transfer to Nimal</strong><span>Sun · Instant</span></div>
+          <div class="txn-amt out">−12,000</div>
+        </div>
+      </div>
+    </div>
+    <div class="tabbar">
+      <div class="tab active"><span class="ico">⌂</span>Home</div>
+      <div class="tab"><span class="ico">⇄</span>Pay</div>
+      <div class="tab"><span class="ico">◇</span>Cards</div>
+      <div class="tab"><span class="ico">☰</span>More</div>
+    </div>
+  </div>
+</body>
+</html>

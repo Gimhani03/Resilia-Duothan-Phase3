@@ -31,7 +31,7 @@ RESILIA restores everyday banking — accounts, payments, credit, fraud controls
 | Customer app | Expo · React Native · TypeScript |
 | Staff / web | React · Vite · Tailwind CSS |
 | API | NestJS · modular feature services |
-| Data | Prisma · SQLite (local) or Postgres + Redis (Docker) |
+| Data | Prisma · PostgreSQL + Redis (Docker) |
 | Tooling | npm workspaces · GitHub Actions CI |
 
 ---
@@ -48,8 +48,11 @@ apps/
 packages/
   shared/     Shared types and demo constants
 scripts/      Local tooling
-.github/      CI workflows
+.github/      CI + CD workflows
 docker-compose.yml
+docker-compose.prod.yml   Full production stack (Phase 3)
+render.yaml               Render.com IaC blueprint
+DEPLOYMENT.md             Phase 3 deployment guide
 ```
 
 Module boundaries mirror the Phase 1 architecture so domains can grow into separately deployable services later.
@@ -61,7 +64,7 @@ Module boundaries mirror the Phase 1 architecture so domains can grow into separ
 - **Node.js** 22+
 - **npm** 10+
 - **Expo Go** (optional, for a physical device)
-- **Docker** (optional, for Postgres + Redis)
+- **Docker** (required for database — `npm run db:up`)
 
 ---
 
@@ -175,7 +178,7 @@ After `npm run setup` / seed, the console prints:
 | FR-13 | Hash-chained audit trail |
 | FR-15 | Freeze + disputes (customer + ops resolve) |
 
-Phase 1 production targets such as Kafka, Kubernetes, HSM/Vault, and automated multi-region failover remain for the deployment phase. This rebuild proves the product journeys and module boundaries.
+Phase 1 production targets such as Kafka, Kubernetes, HSM/Vault, and automated multi-region failover are addressed in Phase 3 via Docker, CI/CD, and cloud deployment — see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ---
 

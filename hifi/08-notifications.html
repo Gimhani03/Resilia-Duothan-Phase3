@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Notifications</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Alerts</span></div>
+      <button class="btn-ghost" type="button">Mark all</button>
+    </div>
+    <div class="content">
+      <h1 class="hero-title" style="font-size:26px">Notifications</h1>
+      <p class="sub">Push, SMS, and email alerts for logins, transactions, and security events.</p>
+
+      <div class="chips">
+        <span class="chip on">All</span>
+        <span class="chip">Security</span>
+        <span class="chip">Payments</span>
+        <span class="chip">Loans</span>
+      </div>
+
+      <div class="card alert-card">
+        <div class="dot"></div>
+        <div>
+          <strong style="display:block;color:var(--crimson-dark);font-size:13px;margin-bottom:4px">New device login blocked</strong>
+          <span style="font-size:12px;color:var(--muted);line-height:1.45">Colombo · iPhone 16 · MFA required before access. 2 min ago</span>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;gap:12px;align-items:flex-start">
+        <div class="txn-icon" style="background:var(--ok-soft);color:var(--ok)">↗</div>
+        <div style="flex:1">
+          <strong style="display:block;color:var(--navy);font-size:13px;margin-bottom:4px">Transfer sent · LKR 25,025</strong>
+          <span style="font-size:12px;color:var(--muted)">To Nimal Fernando · People’s Bank · Fraud cleared · 18 min ago</span>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;gap:12px;align-items:flex-start">
+        <div class="txn-icon" style="background:var(--warn-soft);color:var(--warn)">%</div>
+        <div style="flex:1">
+          <strong style="display:block;color:var(--navy);font-size:13px;margin-bottom:4px">Loan estimate ready</strong>
+          <span style="font-size:12px;color:var(--muted)">AI eligibility 78% · LKR 350,000 personal loan · 1 hr ago</span>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;gap:12px;align-items:flex-start">
+        <div class="txn-icon">CE</div>
+        <div style="flex:1">
+          <strong style="display:block;color:var(--navy);font-size:13px;margin-bottom:4px">CEB bill paid</strong>
+          <span style="font-size:12px;color:var(--muted)">LKR 6,890 from Savings ****4821 · Yesterday</span>
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;gap:12px;align-items:flex-start">
+        <div class="txn-icon" style="background:var(--crimson-soft);color:var(--crimson)">❄</div>
+        <div style="flex:1">
+          <strong style="display:block;color:var(--navy);font-size:13px;margin-bottom:4px">Card freeze available</strong>
+          <span style="font-size:12px;color:var(--muted)">Tap to instantly freeze your debit card if you suspect fraud.</span>
+        </div>
+      </div>
+
+      <p class="footer-note">FR-10 · Notification microservice · push / SMS / email</p>
+    </div>
+  </div>
+</body>
+</html>

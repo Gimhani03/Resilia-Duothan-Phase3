@@ -1,0 +1,11 @@
+{
+  "name": "resilia-hifi",
+  "private": true,
+  "scripts": {
+    "dev": "vite --port 5180 --strictPort",
+    "preview": "vite preview --port 5180 --strictPort"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

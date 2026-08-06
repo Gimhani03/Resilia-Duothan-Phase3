@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RESILIA — Cards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+</head>
+<body>
+  <div class="phone" id="screen">
+    <div class="status-bar">
+      <span>9:41</span>
+      <div class="icons"><span>■■■</span><span>Wi‑Fi</span><span>100%</span></div>
+    </div>
+    <div class="app-header">
+      <button class="btn-ghost" type="button">← Back</button>
+      <div class="brand"><span>Cards</span></div>
+      <button class="btn-ghost" type="button">+ Add</button>
+    </div>
+    <div class="content">
+      <h1 class="hero-title" style="font-size:26px">Your cards</h1>
+      <p class="sub">Manage spend limits, freeze, and online payments before fraud hits.</p>
+
+      <div class="card" style="background:linear-gradient(145deg,#1a1a2e 0%,#2d2d4a 50%,#4a1830 100%);color:#fff;border:none;min-height:170px;position:relative;overflow:hidden">
+        <div style="font-size:12px;opacity:0.75;margin-bottom:28px">RESILIA Debit</div>
+        <div style="font-family:var(--display);font-size:22px;letter-spacing:0.12em;margin-bottom:18px">•••• •••• •••• 4821</div>
+        <div style="display:flex;justify-content:space-between;align-items:flex-end">
+          <div>
+            <div style="font-size:10px;opacity:0.65">CARDHOLDER</div>
+            <div style="font-size:13px;font-weight:700">AMAL PERERA</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:10px;opacity:0.65">EXP</div>
+            <div style="font-size:13px;font-weight:700">08/28</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-actions" style="grid-template-columns:repeat(4,1fr)">
+        <div class="qa"><div class="ico">❄</div><span>Freeze</span></div>
+        <div class="qa"><div class="ico">☰</div><span>Limits</span></div>
+        <div class="qa"><div class="ico">◎</div><span>PIN</span></div>
+        <div class="qa"><div class="ico">↗</div><span>Details</span></div>
+      </div>
+
+      <div class="card">
+        <div class="section-label" style="margin-top:0">Controls</div>
+        <div class="summary-row"><span>Online payments</span><strong>On</strong></div>
+        <div class="summary-row"><span>Contactless</span><strong>On</strong></div>
+        <div class="summary-row"><span>International</span><strong>Off</strong></div>
+        <div class="summary-row"><span>Daily limit</span><strong>LKR 100,000</strong></div>
+      </div>
+
+      <div class="card">
+        <div class="section-label" style="margin-top:0">Credit card · ****7712</div>
+        <div class="summary-row"><span>Available</span><strong>LKR 158,000</strong></div>
+        <div class="summary-row"><span>Status</span><strong><span class="badge badge-ok">Active</span></strong></div>
+      </div>
+
+      <button class="btn btn-primary" type="button">Freeze debit card</button>
+    </div>
+    <div class="tabbar">
+      <div class="tab"><span class="ico">⌂</span>Home</div>
+      <div class="tab"><span class="ico">⇄</span>Pay</div>
+      <div class="tab active"><span class="ico">◇</span>Cards</div>
+      <div class="tab"><span class="ico">☰</span>More</div>
+    </div>
+  </div>
+</body>
+</html>
