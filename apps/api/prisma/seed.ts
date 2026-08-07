@@ -23,6 +23,7 @@ async function main() {
   await prisma.session.deleteMany();
   await prisma.account.deleteMany();
   await prisma.auditEvent.deleteMany();
+  await prisma.kycDocument.deleteMany();
   await prisma.user.deleteMany();
 
   const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 10);
