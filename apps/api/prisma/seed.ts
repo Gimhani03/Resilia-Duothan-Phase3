@@ -11,6 +11,15 @@ function hashChain(prev: string, category: string, action: string, actor: string
 }
 
 async function main() {
+  const existingUsers = await prisma.user.count();
+  if (existingUsers > 0) {
+    console.log(
+      `[seed] ${existingUsers} user(s) already in database — skipping seed (data preserved on redeploy)`,
+    );
+    return;
+  }
+
+  console.log("[seed] Empty database — loading demo users and sample data...");
   await prisma.dispute.deleteMany();
   await prisma.mfaChallenge.deleteMany();
   await prisma.transaction.deleteMany();
